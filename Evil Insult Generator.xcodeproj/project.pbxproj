@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D60ACD3282C3F32007A9AB4 /* InsultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD2282C3F32007A9AB4 /* InsultVC.swift */; };
+		2D60ACD5282C3F49007A9AB4 /* InsultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD4282C3F49007A9AB4 /* InsultModel.swift */; };
+		2D60ACD7282C3FBC007A9AB4 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD6282C3FBC007A9AB4 /* StartPresenter.swift */; };
+		2D60ACDB282C40A7007A9AB4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACDA282C40A7007A9AB4 /* NetworkService.swift */; };
+		2D60ACDF282C47ED007A9AB4 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACDE282C47ED007A9AB4 /* ModuleBuilder.swift */; };
+		2D60ACE1282E8247007A9AB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACE0282E8247007A9AB4 /* Router.swift */; };
+		2D60ACE7282E854C007A9AB4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACE6282E854C007A9AB4 /* SettingsVC.swift */; };
+		2D60ACE9282E85C1007A9AB4 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACE8282E85C1007A9AB4 /* SettingsPresenter.swift */; };
+		2D60ACEE282EA2F8007A9AB4 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACED282EA2F8007A9AB4 /* AppFonts.swift */; };
+		2D60ACF0282EABE6007A9AB4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACEF282EABE6007A9AB4 /* Colors.swift */; };
+		2D8182A92834087E00C1DD28 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2D8182A82834087E00C1DD28 /* Alamofire */; };
+		2D8182AC283409AB00C1DD28 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8182AB283409AB00C1DD28 /* String+.swift */; };
+		2D94509A2831131200BB5D48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450992831131200BB5D48 /* CoreDataManager.swift */; };
+		2D94509C28311DCB00BB5D48 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94509B28311DCB00BB5D48 /* Timer.swift */; };
+		2D9450A128313C0800BB5D48 /* InsultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A028313C0800BB5D48 /* InsultsModel.swift */; };
+		2D9450A32831428800BB5D48 /* SavedInsultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A22831428800BB5D48 /* SavedInsultsVC.swift */; };
+		2D9450A6283143AB00BB5D48 /* SavedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A5283143AB00BB5D48 /* SavedPresenter.swift */; };
+		2DADFBDF280594700006CEE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DADFBDE280594700006CEE9 /* AppDelegate.swift */; };
+		2DADFBE1280594700006CEE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DADFBE0280594700006CEE9 /* SceneDelegate.swift */; };
+		2DADFBE9280594700006CEE9 /* Evil_Insult_Generator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DADFBE7280594700006CEE9 /* Evil_Insult_Generator.xcdatamodeld */; };
+		2DADFBEB280594710006CEE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DADFBEA280594710006CEE9 /* Assets.xcassets */; };
+		2DADFBEE280594710006CEE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DADFBEC280594710006CEE9 /* LaunchScreen.storyboard */; };
+		2DD0B5CC2823F324009FF3CC /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD0B5CB2823F324009FF3CC /* PressStart2P-Regular.ttf */; };
+		2DF8C7DA28340BAF00EF1FB6 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C7D928340BAF00EF1FB6 /* UIImageView+.swift */; };
+		2DF8C7DC2834CB0300EF1FB6 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C7DB2834CB0300EF1FB6 /* UILabel+.swift */; };
+		4CAC92D8F011DAC11A4588CC /* Pods_Evil_Insult_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69C9A14B730A999F5EFFE8A /* Pods_Evil_Insult_Generator.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D60ACD2282C3F32007A9AB4 /* InsultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultVC.swift; sourceTree = "<group>"; };
+		2D60ACD4282C3F49007A9AB4 /* InsultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultModel.swift; sourceTree = "<group>"; };
+		2D60ACD6282C3FBC007A9AB4 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		2D60ACDA282C40A7007A9AB4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2D60ACDE282C47ED007A9AB4 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		2D60ACE0282E8247007A9AB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2D60ACE6282E854C007A9AB4 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		2D60ACE8282E85C1007A9AB4 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		2D60ACED282EA2F8007A9AB4 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		2D60ACEF282EABE6007A9AB4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2D8182AB283409AB00C1DD28 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		2D9450992831131200BB5D48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2D94509B28311DCB00BB5D48 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		2D9450A028313C0800BB5D48 /* InsultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultsModel.swift; sourceTree = "<group>"; };
+		2D9450A22831428800BB5D48 /* SavedInsultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedInsultsVC.swift; sourceTree = "<group>"; };
+		2D9450A5283143AB00BB5D48 /* SavedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPresenter.swift; sourceTree = "<group>"; };
+		2DADFBDB280594700006CEE9 /* Evil Insult Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Evil Insult Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DADFBDE280594700006CEE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DADFBE0280594700006CEE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2DADFBE8280594700006CEE9 /* Evil_Insult_Generator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evil_Insult_Generator.xcdatamodel; sourceTree = "<group>"; };
+		2DADFBEA280594710006CEE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DADFBED280594710006CEE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DADFBEF280594710006CEE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD0B5CB2823F324009FF3CC /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		2DF8C7D928340BAF00EF1FB6 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		2DF8C7DB2834CB0300EF1FB6 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		A2542AC6AF2826B130A9648C /* Pods-Evil Insult Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Evil Insult Generator.debug.xcconfig"; path = "Target Support Files/Pods-Evil Insult Generator/Pods-Evil Insult Generator.debug.xcconfig"; sourceTree = "<group>"; };
+		C69C9A14B730A999F5EFFE8A /* Pods_Evil_Insult_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Evil_Insult_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC41FA33AC433FF1DBB15DF5 /* Pods-Evil Insult Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Evil Insult Generator.release.xcconfig"; path = "Target Support Files/Pods-Evil Insult Generator/Pods-Evil Insult Generator.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DADFBD8280594700006CEE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAC92D8F011DAC11A4588CC /* Pods_Evil_Insult_Generator.framework in Frameworks */,
+				2D8182A92834087E00C1DD28 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D60ACCE282C3E7A007A9AB4 /* StartModule */ = {
+			isa = PBXGroup;
+			children = (
+				2D60ACD2282C3F32007A9AB4 /* InsultVC.swift */,
+				2D60ACD4282C3F49007A9AB4 /* InsultModel.swift */,
+				2D60ACD6282C3FBC007A9AB4 /* StartPresenter.swift */,
+			);
+			path = StartModule;
+			sourceTree = "<group>";
+		};
+		2D60ACD9282C408F007A9AB4 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2D60ACDA282C40A7007A9AB4 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		2D60ACDC282C431C007A9AB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2D94509B28311DCB00BB5D48 /* Timer.swift */,
+				2D8182AA2834099E00C1DD28 /* Extensions */,
+				2D9450982831130900BB5D48 /* CoreData */,
+				2D60ACD9282C408F007A9AB4 /* ServiceLayer */,
+				2DFC95702805AEC20074034C /* Views */,
+				2D60ACF328302816007A9AB4 /* Other */,
+				2D60ACDD282C432D007A9AB4 /* Fonts */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2D60ACDD282C432D007A9AB4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2DD0B5CB2823F324009FF3CC /* PressStart2P-Regular.ttf */,
+				2D60ACED282EA2F8007A9AB4 /* AppFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2D60ACE2282E8518007A9AB4 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				2D60ACE6282E854C007A9AB4 /* SettingsVC.swift */,
+				2D60ACE8282E85C1007A9AB4 /* SettingsPresenter.swift */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		2D60ACF328302816007A9AB4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2D60ACEF282EABE6007A9AB4 /* Colors.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2D8182AA2834099E00C1DD28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D8182AB283409AB00C1DD28 /* String+.swift */,
+				2DF8C7DB2834CB0300EF1FB6 /* UILabel+.swift */,
+				2DF8C7D928340BAF00EF1FB6 /* UIImageView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D9450982831130900BB5D48 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2D9450992831131200BB5D48 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2D94509D28313B9C00BB5D48 /* SavedModule */ = {
+			isa = PBXGroup;
+			children = (
+				2D9450A22831428800BB5D48 /* SavedInsultsVC.swift */,
+				2D9450A028313C0800BB5D48 /* InsultsModel.swift */,
+				2D9450A5283143AB00BB5D48 /* SavedPresenter.swift */,
+			);
+			path = SavedModule;
+			sourceTree = "<group>";
+		};
+		2DADFBD2280594700006CEE9 = {
+			isa = PBXGroup;
+			children = (
+				2DADFBDD280594700006CEE9 /* Evil Insult Generator */,
+				2DADFBDC280594700006CEE9 /* Products */,
+				46D9667DCEB837BDC560F7F7 /* Pods */,
+				4AC20701014E5E76FE307759 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2DADFBDC280594700006CEE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DADFBDB280594700006CEE9 /* Evil Insult Generator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DADFBDD280594700006CEE9 /* Evil Insult Generator */ = {
+			isa = PBXGroup;
+			children = (
+				2DADFBDE280594700006CEE9 /* AppDelegate.swift */,
+				2DADFBE0280594700006CEE9 /* SceneDelegate.swift */,
+				2D60ACDE282C47ED007A9AB4 /* ModuleBuilder.swift */,
+				2D60ACE0282E8247007A9AB4 /* Router.swift */,
+				2D94509D28313B9C00BB5D48 /* SavedModule */,
+				2D60ACE2282E8518007A9AB4 /* SettingsModule */,
+				2D60ACCE282C3E7A007A9AB4 /* StartModule */,
+				2D60ACDC282C431C007A9AB4 /* Helpers */,
+				2DADFBEF280594710006CEE9 /* Info.plist */,
+				2DADFBE7280594700006CEE9 /* Evil_Insult_Generator.xcdatamodeld */,
+			);
+			path = "Evil Insult Generator";
+			sourceTree = "<group>";
+		};
+		2DFC95702805AEC20074034C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DADFBEC280594710006CEE9 /* LaunchScreen.storyboard */,
+				2DADFBEA280594710006CEE9 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		46D9667DCEB837BDC560F7F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2542AC6AF2826B130A9648C /* Pods-Evil Insult Generator.debug.xcconfig */,
+				EC41FA33AC433FF1DBB15DF5 /* Pods-Evil Insult Generator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4AC20701014E5E76FE307759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C69C9A14B730A999F5EFFE8A /* Pods_Evil_Insult_Generator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DADFBDA280594700006CEE9 /* Evil Insult Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DADFBF2280594710006CEE9 /* Build configuration list for PBXNativeTarget "Evil Insult Generator" */;
+			buildPhases = (
+				D00B38CB55BB2C1ACEE29910 /* [CP] Check Pods Manifest.lock */,
+				2DADFBD7280594700006CEE9 /* Sources */,
+				2DADFBD8280594700006CEE9 /* Frameworks */,
+				2DADFBD9280594700006CEE9 /* Resources */,
+				C12B317C2C9E7D22C348CC38 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Evil Insult Generator";
+			packageProductDependencies = (
+				2D8182A82834087E00C1DD28 /* Alamofire */,
+			);
+			productName = "Evil Insult Generator";
+			productReference = 2DADFBDB280594700006CEE9 /* Evil Insult Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DADFBD3280594700006CEE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					2DADFBDA280594700006CEE9 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 2DADFBD6280594700006CEE9 /* Build configuration list for PBXProject "Evil Insult Generator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DADFBD2280594700006CEE9;
+			packageReferences = (
+				2D8182A72834087D00C1DD28 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 2DADFBDC280594700006CEE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DADFBDA280594700006CEE9 /* Evil Insult Generator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DADFBD9280594700006CEE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD0B5CC2823F324009FF3CC /* PressStart2P-Regular.ttf in Resources */,
+				2DADFBEE280594710006CEE9 /* LaunchScreen.storyboard in Resources */,
+				2DADFBEB280594710006CEE9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C12B317C2C9E7D22C348CC38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Evil Insult Generator/Pods-Evil Insult Generator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Evil Insult Generator/Pods-Evil Insult Generator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Evil Insult Generator/Pods-Evil Insult Generator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D00B38CB55BB2C1ACEE29910 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Evil Insult Generator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DADFBD7280594700006CEE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D60ACDB282C40A7007A9AB4 /* NetworkService.swift in Sources */,
+				2D60ACF0282EABE6007A9AB4 /* Colors.swift in Sources */,
+				2D60ACD7282C3FBC007A9AB4 /* StartPresenter.swift in Sources */,
+				2DADFBDF280594700006CEE9 /* AppDelegate.swift in Sources */,
+				2DADFBE9280594700006CEE9 /* Evil_Insult_Generator.xcdatamodeld in Sources */,
+				2D9450A128313C0800BB5D48 /* InsultsModel.swift in Sources */,
+				2DADFBE1280594700006CEE9 /* SceneDelegate.swift in Sources */,
+				2D60ACEE282EA2F8007A9AB4 /* AppFonts.swift in Sources */,
+				2D9450A6283143AB00BB5D48 /* SavedPresenter.swift in Sources */,
+				2D60ACD3282C3F32007A9AB4 /* InsultVC.swift in Sources */,
+				2D60ACE7282E854C007A9AB4 /* SettingsVC.swift in Sources */,
+				2D60ACD5282C3F49007A9AB4 /* InsultModel.swift in Sources */,
+				2D60ACDF282C47ED007A9AB4 /* ModuleBuilder.swift in Sources */,
+				2D60ACE1282E8247007A9AB4 /* Router.swift in Sources */,
+				2D8182AC283409AB00C1DD28 /* String+.swift in Sources */,
+				2D9450A32831428800BB5D48 /* SavedInsultsVC.swift in Sources */,
+				2DF8C7DA28340BAF00EF1FB6 /* UIImageView+.swift in Sources */,
+				2D94509A2831131200BB5D48 /* CoreDataManager.swift in Sources */,
+				2DF8C7DC2834CB0300EF1FB6 /* UILabel+.swift in Sources */,
+				2D60ACE9282E85C1007A9AB4 /* SettingsPresenter.swift in Sources */,
+				2D94509C28311DCB00BB5D48 /* Timer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2DADFBEC280594710006CEE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DADFBED280594710006CEE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DADFBF0280594710006CEE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DADFBF1280594710006CEE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DADFBF3280594710006CEE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2542AC6AF2826B130A9648C /* Pods-Evil Insult Generator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Y5VVZ632N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Evil Insult Generator/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kesapevv.Evil-Insult-Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DADFBF4280594710006CEE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC41FA33AC433FF1DBB15DF5 /* Pods-Evil Insult Generator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6Y5VVZ632N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Evil Insult Generator/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kesapevv.Evil-Insult-Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DADFBD6280594700006CEE9 /* Build configuration list for PBXProject "Evil Insult Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DADFBF0280594710006CEE9 /* Debug */,
+				2DADFBF1280594710006CEE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DADFBF2280594710006CEE9 /* Build configuration list for PBXNativeTarget "Evil Insult Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DADFBF3280594710006CEE9 /* Debug */,
+				2DADFBF4280594710006CEE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D8182A72834087D00C1DD28 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D8182A82834087E00C1DD28 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D8182A72834087D00C1DD28 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2DADFBE7280594700006CEE9 /* Evil_Insult_Generator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DADFBE8280594700006CEE9 /* Evil_Insult_Generator.xcdatamodel */,
+			);
+			currentVersion = 2DADFBE8280594700006CEE9 /* Evil_Insult_Generator.xcdatamodel */;
+			path = Evil_Insult_Generator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2DADFBD3280594700006CEE9 /* Project object */;
+}
