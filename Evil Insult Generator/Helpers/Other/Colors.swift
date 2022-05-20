@@ -9,12 +9,21 @@ import Foundation
 import UIKit
 
 enum Colors {
-    case whiteBackground
+    case black
+    case white
+    case semiwhite
+    case semiblack
     
     var value: UIColor {
         switch self {
-        case .whiteBackground:
+        case .semiwhite:
             return UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        case .black:
+            return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        case .semiblack:
+            return UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        case .white:
+            return UIColor(red: 1, green: 1, blue: 1, alpha: 0)
         }
     }
     

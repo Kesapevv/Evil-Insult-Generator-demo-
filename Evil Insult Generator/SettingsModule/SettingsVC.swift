@@ -33,7 +33,7 @@ class SettingsVC: UIViewController {
     
     //MARK: - Views
     
-    private var backgroundImageView = UIImageView.setBackgroundImage(image: Images.day)
+    private var backgroundImageView = UIImageView.setBackgroundImage(image: BackgroundImage.chooseDayImage())
     
     private var settingsView = UIView()
     
@@ -90,7 +90,7 @@ class SettingsVC: UIViewController {
     }
     
     private func setupViewData() {
-        self.settingsView.backgroundColor = Colors.whiteBackground.value
+        self.settingsView.backgroundColor = AppViews.chooseViewColor()
         self.settingsView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
     }
     
@@ -128,20 +128,20 @@ class SettingsVC: UIViewController {
     }
     
     private func setupButtonsData() {
-        self.backButton.tintColor = .black
+        self.backButton.tintColor = AppColors.chooseStringColor()
         self.backButton.setImage(UIImage(named: "arrow.left"), for: .normal)
         
-        self.rateUsButton.tintColor = .black
+        self.rateUsButton.tintColor = AppColors.chooseStringColor()
         self.rateUsButton.setTitle("RATE US", for: .normal)
         self.rateUsButton.titleLabel?.font = AppFonts.regular17.font
         self.rateUsButton.setImage(UIImage(named: "heart"), for: .normal)
         
-        self.savedInsultsButton.tintColor = .black
+        self.savedInsultsButton.tintColor = AppColors.chooseStringColor()
         self.savedInsultsButton.setTitle("SAVED INSULTS", for: .normal)
         self.savedInsultsButton.titleLabel?.font = AppFonts.regular17.font
         self.savedInsultsButton.setImage(UIImage(named: "magazine"), for: .normal)
         
-        self.noticeButton.tintColor = .black
+        self.noticeButton.tintColor = AppColors.chooseStringColor()
         self.noticeButton.setTitle("OFF NOTICE", for: .normal)
         self.noticeButton.titleLabel?.font = AppFonts.regular17.font
         self.noticeButton.setImage(UIImage(named: "bell.slash"), for: .normal)

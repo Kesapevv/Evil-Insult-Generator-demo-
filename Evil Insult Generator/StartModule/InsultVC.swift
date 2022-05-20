@@ -51,7 +51,7 @@ class InsultVC: UIViewController {
     
     //MARK: - View
     
-    private var backgroundImageView = UIImageView.setBackgroundImage(image: Images.day)
+    private var backgroundImageView = UIImageView.setBackgroundImage(image: BackgroundImage.chooseDayImage())
     
     private var insultView = UIView()
     
@@ -137,10 +137,10 @@ class InsultVC: UIViewController {
     }
     
     private func setupViewData() {
-        self.insultView.backgroundColor = Colors.whiteBackground.value
+        self.insultView.backgroundColor = AppViews.chooseViewColor()
         self.insultView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
         
-        self.alertView.backgroundColor = Colors.whiteBackground.value
+        self.alertView.backgroundColor = AppViews.chooseViewColor()
         self.alertView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
     }
     
@@ -187,24 +187,30 @@ class InsultVC: UIViewController {
     
     private func setupLabelsData() {
         self.insultLabel.text = self.presenter?.insult.currentInsult
+        self.insultLabel.textColor = AppColors.chooseStringColor()
         
         self.saveLabel.text = "Save"
         self.saveLabel.font = AppFonts.regular15.font
+        self.saveLabel.textColor = AppColors.chooseStringColor()
         
         self.sendLabel.text = "Send"
         self.sendLabel.font = AppFonts.regular15.font
+        self.sendLabel.textColor = AppColors.chooseStringColor()
         
         self.swapLabel.text = "Swap"
         self.swapLabel.font = AppFonts.regular15.font
+        self.swapLabel.textColor = AppColors.chooseStringColor()
         
         self.generateNewInsultLabel.numberOfLines = 2
         self.generateNewInsultLabel.textAlignment = .center
         self.generateNewInsultLabel.font = AppFonts.regular15.font
         self.generateNewInsultLabel.text = "Generate a new insult?"
+        self.generateNewInsultLabel.textColor = AppColors.chooseStringColor()
         
         self.timerLabel.textAlignment = .center
         self.timerLabel.font = AppFonts.regular15.font
         self.timerLabel.text = String.timeString(time: TimeInterval(10))
+        self.timerLabel.textColor = AppColors.chooseStringColor()
     }
     
     //MARK: - Buttons
@@ -257,22 +263,22 @@ class InsultVC: UIViewController {
     }
     
     private func setupButtonsData() {
-        self.settingsButtonImage.tintColor = .black
-        self.settingsButtonImage.setImage(UIImage(named: "Settings"), for: .normal)
+        self.settingsButtonImage.tintColor = AppColors.chooseStringColor()
+        self.settingsButtonImage.setImage(UIImage(named: "settings"), for: .normal)
         
-        self.saveButton.tintColor = .black
+        self.saveButton.tintColor = AppColors.chooseStringColor()
         self.saveButton.setImage(UIImage(named: "star"), for: .normal)
         
-        self.shareButton.tintColor = .black
+        self.shareButton.tintColor = AppColors.chooseStringColor()
         self.shareButton.setImage(UIImage(named: "location.fill"), for: .normal)
         
-        self.swapButton.tintColor = .black
+        self.swapButton.tintColor = AppColors.chooseStringColor()
         self.swapButton.setImage(UIImage(named: "arrow.fill"), for: .normal)
         
-        self.generateYesButton.setTitleColor(.black, for: .normal)
+        self.generateYesButton.setTitleColor(AppColors.chooseStringColor(), for: .normal)
         self.generateYesButton.setAttributedTitle(String.createString("Yes"), for: .normal)
         
-        self.generateNoButton.setTitleColor(.black, for: .normal)
+        self.generateNoButton.setTitleColor(AppColors.chooseStringColor(), for: .normal)
         self.generateNoButton.setAttributedTitle(String.createString("No"), for: .normal)
     }
     

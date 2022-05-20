@@ -19,6 +19,10 @@
 		2D60ACF0282EABE6007A9AB4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACEF282EABE6007A9AB4 /* Colors.swift */; };
 		2D8182A92834087E00C1DD28 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2D8182A82834087E00C1DD28 /* Alamofire */; };
 		2D8182AC283409AB00C1DD28 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8182AB283409AB00C1DD28 /* String+.swift */; };
+		2D89C9582837EF630002FA53 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89C9572837EF630002FA53 /* BackgroundImage.swift */; };
+		2D89C95A2837EFB00002FA53 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89C9592837EFB00002FA53 /* AppColors.swift */; };
+		2D89C95D2837F1A50002FA53 /* AppViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89C95C2837F1A50002FA53 /* AppViews.swift */; };
+		2D89C95F2837F5420002FA53 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89C95E2837F5420002FA53 /* AppImages.swift */; };
 		2D94509A2831131200BB5D48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450992831131200BB5D48 /* CoreDataManager.swift */; };
 		2D94509C28311DCB00BB5D48 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94509B28311DCB00BB5D48 /* Timer.swift */; };
 		2D9450A128313C0800BB5D48 /* SavedInsultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A028313C0800BB5D48 /* SavedInsultsModel.swift */; };
@@ -47,6 +51,10 @@
 		2D60ACED282EA2F8007A9AB4 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		2D60ACEF282EABE6007A9AB4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2D8182AB283409AB00C1DD28 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		2D89C9572837EF630002FA53 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
+		2D89C9592837EFB00002FA53 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		2D89C95C2837F1A50002FA53 /* AppViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViews.swift; sourceTree = "<group>"; };
+		2D89C95E2837F5420002FA53 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		2D9450992831131200BB5D48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2D94509B28311DCB00BB5D48 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		2D9450A028313C0800BB5D48 /* SavedInsultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedInsultsModel.swift; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2D94509B28311DCB00BB5D48 /* Timer.swift */,
+				2D89C95B2837EFB30002FA53 /* CurrentTimeSettings */,
 				2D8182AA2834099E00C1DD28 /* Extensions */,
 				2D9450982831130900BB5D48 /* CoreData */,
 				2D60ACD9282C408F007A9AB4 /* ServiceLayer */,
@@ -146,6 +155,17 @@
 				2DF8C7D928340BAF00EF1FB6 /* UIImageView+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D89C95B2837EFB30002FA53 /* CurrentTimeSettings */ = {
+			isa = PBXGroup;
+			children = (
+				2D89C9572837EF630002FA53 /* BackgroundImage.swift */,
+				2D89C95E2837F5420002FA53 /* AppImages.swift */,
+				2D89C9592837EFB00002FA53 /* AppColors.swift */,
+				2D89C95C2837F1A50002FA53 /* AppViews.swift */,
+			);
+			path = CurrentTimeSettings;
 			sourceTree = "<group>";
 		};
 		2D9450982831130900BB5D48 /* CoreData */ = {
@@ -357,6 +377,7 @@
 				2DADFBE1280594700006CEE9 /* SceneDelegate.swift in Sources */,
 				2D60ACEE282EA2F8007A9AB4 /* AppFonts.swift in Sources */,
 				2D9450A6283143AB00BB5D48 /* SavedPresenter.swift in Sources */,
+				2D89C9582837EF630002FA53 /* BackgroundImage.swift in Sources */,
 				2D60ACD3282C3F32007A9AB4 /* InsultVC.swift in Sources */,
 				2D60ACE7282E854C007A9AB4 /* SettingsVC.swift in Sources */,
 				2D60ACD5282C3F49007A9AB4 /* InsultModel.swift in Sources */,
@@ -367,8 +388,11 @@
 				2DF8C7DA28340BAF00EF1FB6 /* UIImageView+.swift in Sources */,
 				2D94509A2831131200BB5D48 /* CoreDataManager.swift in Sources */,
 				2DF8C7DC2834CB0300EF1FB6 /* UILabel+.swift in Sources */,
+				2D89C95D2837F1A50002FA53 /* AppViews.swift in Sources */,
 				2D60ACE9282E85C1007A9AB4 /* SettingsPresenter.swift in Sources */,
+				2D89C95F2837F5420002FA53 /* AppImages.swift in Sources */,
 				2D94509C28311DCB00BB5D48 /* Timer.swift in Sources */,
+				2D89C95A2837EFB00002FA53 /* AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

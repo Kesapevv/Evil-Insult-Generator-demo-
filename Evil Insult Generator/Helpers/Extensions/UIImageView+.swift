@@ -8,13 +8,6 @@
 import Foundation
 import UIKit
 
-public enum Images {
-    
-    static let day = "day"
-    static let night = "library"
-    
-}
-
 extension UIImageView {
     
     static func setBackgroundImage(image: String) -> UIImageView {

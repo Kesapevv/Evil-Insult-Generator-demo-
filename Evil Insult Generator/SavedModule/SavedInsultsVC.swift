@@ -41,7 +41,7 @@ class SavedInsultsVC: UIViewController {
     
     //MARK: - Views
     
-    private var backgroundImageView = UIImageView.setBackgroundImage(image: "library")
+    private var backgroundImageView = UIImageView.setBackgroundImage(image: BackgroundImage.chooseLibraryImage())
     
     private var insultView = UIView()
     
@@ -106,7 +106,7 @@ class SavedInsultsVC: UIViewController {
     }
     
     private func setupViewData() {
-        self.insultView.backgroundColor = Colors.whiteBackground.value
+        self.insultView.backgroundColor = AppViews.chooseViewColor()
         self.insultView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
     }
     
@@ -140,6 +140,7 @@ class SavedInsultsVC: UIViewController {
     }
     
     private func setupLabelsData() {
+        self.insultLabel.textColor = AppColors.chooseStringColor()
         if self.presenter?.insults.savedInsultsData.isEmpty == true {
             self.insultLabel.text = "no insults"
         } else {
@@ -148,12 +149,15 @@ class SavedInsultsVC: UIViewController {
         
         self.backLabel.text = "Back"
         self.backLabel.font = AppFonts.regular15.font
+        self.backLabel.textColor = AppColors.chooseStringColor()
         
         self.nextLabel.text = "Next"
         self.nextLabel.font = AppFonts.regular15.font
+        self.nextLabel.textColor = AppColors.chooseStringColor()
         
         self.shareLabel.text = "Share"
         self.shareLabel.font = AppFonts.regular15.font
+        self.shareLabel.textColor = AppColors.chooseStringColor()
     }
     
     //MARK: - Buttons
@@ -199,19 +203,19 @@ class SavedInsultsVC: UIViewController {
     }
     
     private func setupButtonsData() {
-        self.backButton.tintColor = .black
+        self.backButton.tintColor = AppColors.chooseStringColor()
         self.backButton.setImage(UIImage(named: "arrow.left"), for: .normal)
         
-        self.deleteButton.tintColor = .black
+        self.deleteButton.tintColor = AppColors.chooseStringColor()
         self.deleteButton.setImage(UIImage(named: "xmark.bin"), for: .normal)
         
-        self.backInsultButton.tintColor = .black
+        self.backInsultButton.tintColor = AppColors.chooseStringColor()
         self.backInsultButton.setImage(UIImage(named: "backward"), for: .normal)
         
-        self.shareButton.tintColor = .black
+        self.shareButton.tintColor = AppColors.chooseStringColor()
         self.shareButton.setImage(UIImage(named: "location"), for: .normal)
         
-        self.nextInsultButton.tintColor = .black
+        self.nextInsultButton.tintColor = AppColors.chooseStringColor()
         self.nextInsultButton.setImage(UIImage(named: "forward"), for: .normal)
     }
     
