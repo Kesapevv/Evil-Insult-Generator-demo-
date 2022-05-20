@@ -19,19 +19,19 @@ extension String {
     }
     
     static func timeString(time: TimeInterval) -> String {
-             let hour = Int(time) / 3600
-             let minute = Int(time) / 60 % 60
-             let second = Int(time) % 60
-             return String(format: "%02i:%02i:%02i", hour, minute, second)
-     }
+        let hour = Int(time) / 3600
+        let minute = Int(time) / 60 % 60
+        let second = Int(time) % 60
+        return String(format: "%02i:%02i:%02i", hour, minute, second)
+    }
     
     static func stringConfig(_ label: String) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.35
         paragraphStyle.alignment = .center
-
+        
         let string = NSMutableAttributedString(string: label, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
-
+        
         return string
     }
     

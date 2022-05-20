@@ -32,22 +32,22 @@ class SettingsVC: UIViewController {
     var presenter: SettingsViewPresenterProtocol?
     
     //MARK: - Views
-
+    
     private var backgroundImageView = UIImageView.setBackgroundImage(image: Images.day)
-
+    
     private var settingsView = UIView()
-
+    
     private var backButton = UIButton(type: .system)
     private var rateUsButton = UIButton(type: .system)
     private var noticeButton = UIButton(type: .system)
     private var savedInsultsButton = UIButton(type: .system)
-
+    
     //MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
@@ -55,21 +55,21 @@ class SettingsVC: UIViewController {
         self.setupLayout()
         self.setupData()
     }
-
+    
     //MARK: - Methods
-
+    
     private func setupLayout() {
         self.setupViews()
         self.setupButtons()
     }
-
+    
     private func setupData() {
         self.setupViewData()
         self.setupButtonsData()
     }
     
     //MARK: - Images
-
+    
     private func setupImages() {
         self.view.addSubview(self.backgroundImageView)
         self.backgroundImageView.snp.makeConstraints { make in
@@ -78,7 +78,7 @@ class SettingsVC: UIViewController {
     }
     
     //MARK: - Views
-
+    
     private func setupViews() {
         self.view.addSubview(self.settingsView)
         self.settingsView.snp.makeConstraints { make in
@@ -88,14 +88,14 @@ class SettingsVC: UIViewController {
             make.leading.trailing.equalToSuperview().inset(Constraints.settingsViewHorizontal)
         }
     }
-
+    
     private func setupViewData() {
         self.settingsView.backgroundColor = Colors.whiteBackground.value
         self.settingsView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
     }
     
     //MARK: - Buttons
-
+    
     private func setupButtons() {
         self.settingsView.addSubview(self.backButton)
         self.backButton.addTarget(self, action: #selector(self.backButtonAction), for: .touchUpInside)
@@ -103,21 +103,21 @@ class SettingsVC: UIViewController {
             make.leading.equalToSuperview().inset(Constraints.backButtonLeading)
             make.top.equalToSuperview().inset(Constraints.backButtonTop)
         }
-
+        
         self.settingsView.addSubview(self.savedInsultsButton)
         self.savedInsultsButton.addTarget(self, action: #selector(self.savedInsultsAction), for: .touchUpInside)
         self.savedInsultsButton.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(Constraints.savedInsultButtonTop)
             make.centerX.equalToSuperview()
         }
-
+        
         self.settingsView.addSubview(self.rateUsButton)
         self.rateUsButton.addTarget(self, action: #selector(self.rateUsAction), for: .touchUpInside)
         self.rateUsButton.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(Constraints.rateUsButtonTop)
             make.centerX.equalToSuperview()
         }
-
+        
         self.settingsView.addSubview(self.noticeButton)
         self.noticeButton.addTarget(self, action: #selector(self.offNoticeAction), for: .touchUpInside)
         self.noticeButton.snp.makeConstraints { make in
@@ -130,41 +130,41 @@ class SettingsVC: UIViewController {
     private func setupButtonsData() {
         self.backButton.tintColor = .black
         self.backButton.setImage(UIImage(named: "arrow.left"), for: .normal)
-
+        
         self.rateUsButton.tintColor = .black
         self.rateUsButton.setTitle("RATE US", for: .normal)
         self.rateUsButton.titleLabel?.font = AppFonts.regular17.font
         self.rateUsButton.setImage(UIImage(named: "heart"), for: .normal)
-
+        
         self.savedInsultsButton.tintColor = .black
         self.savedInsultsButton.setTitle("SAVED INSULTS", for: .normal)
         self.savedInsultsButton.titleLabel?.font = AppFonts.regular17.font
         self.savedInsultsButton.setImage(UIImage(named: "magazine"), for: .normal)
-
+        
         self.noticeButton.tintColor = .black
         self.noticeButton.setTitle("OFF NOTICE", for: .normal)
         self.noticeButton.titleLabel?.font = AppFonts.regular17.font
         self.noticeButton.setImage(UIImage(named: "bell.slash"), for: .normal)
     }
-
+    
     //MARK: - Actions
-
+    
     @objc func backButtonAction() {
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     @objc func rateUsAction() {
         self.presenter?.rateUsAction(vc: self)
     }
-
+    
     @objc func savedInsultsAction() {
         self.presenter?.pushSavedVC()
     }
-
+    
     @objc func offNoticeAction() {
         print("offed")
     }
-
+    
 }
 
 

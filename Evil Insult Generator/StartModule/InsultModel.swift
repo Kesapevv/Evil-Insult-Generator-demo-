@@ -13,7 +13,7 @@ struct InsultModel: Codable {
     var currentInsult = String()
     
     enum CodingKeys: String, CodingKey {
-             case currentInsult = "insult"
-       }
+        case currentInsult = "insult"
+    }
     
 }

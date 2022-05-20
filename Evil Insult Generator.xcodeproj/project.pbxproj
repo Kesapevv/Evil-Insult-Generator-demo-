@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D60ACD3282C3F32007A9AB4 /* InsultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD2282C3F32007A9AB4 /* InsultVC.swift */; };
 		2D60ACD5282C3F49007A9AB4 /* InsultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD4282C3F49007A9AB4 /* InsultModel.swift */; };
-		2D60ACD7282C3FBC007A9AB4 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD6282C3FBC007A9AB4 /* StartPresenter.swift */; };
+		2D60ACD7282C3FBC007A9AB4 /* InsultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACD6282C3FBC007A9AB4 /* InsultPresenter.swift */; };
 		2D60ACDB282C40A7007A9AB4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACDA282C40A7007A9AB4 /* NetworkService.swift */; };
 		2D60ACDF282C47ED007A9AB4 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACDE282C47ED007A9AB4 /* ModuleBuilder.swift */; };
 		2D60ACE1282E8247007A9AB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60ACE0282E8247007A9AB4 /* Router.swift */; };
@@ -21,7 +21,7 @@
 		2D8182AC283409AB00C1DD28 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8182AB283409AB00C1DD28 /* String+.swift */; };
 		2D94509A2831131200BB5D48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450992831131200BB5D48 /* CoreDataManager.swift */; };
 		2D94509C28311DCB00BB5D48 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D94509B28311DCB00BB5D48 /* Timer.swift */; };
-		2D9450A128313C0800BB5D48 /* InsultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A028313C0800BB5D48 /* InsultsModel.swift */; };
+		2D9450A128313C0800BB5D48 /* SavedInsultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A028313C0800BB5D48 /* SavedInsultsModel.swift */; };
 		2D9450A32831428800BB5D48 /* SavedInsultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A22831428800BB5D48 /* SavedInsultsVC.swift */; };
 		2D9450A6283143AB00BB5D48 /* SavedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9450A5283143AB00BB5D48 /* SavedPresenter.swift */; };
 		2DADFBDF280594700006CEE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DADFBDE280594700006CEE9 /* AppDelegate.swift */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		2D60ACD2282C3F32007A9AB4 /* InsultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultVC.swift; sourceTree = "<group>"; };
 		2D60ACD4282C3F49007A9AB4 /* InsultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultModel.swift; sourceTree = "<group>"; };
-		2D60ACD6282C3FBC007A9AB4 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		2D60ACD6282C3FBC007A9AB4 /* InsultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultPresenter.swift; sourceTree = "<group>"; };
 		2D60ACDA282C40A7007A9AB4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2D60ACDE282C47ED007A9AB4 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		2D60ACE0282E8247007A9AB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		2D8182AB283409AB00C1DD28 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		2D9450992831131200BB5D48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2D94509B28311DCB00BB5D48 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
-		2D9450A028313C0800BB5D48 /* InsultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultsModel.swift; sourceTree = "<group>"; };
+		2D9450A028313C0800BB5D48 /* SavedInsultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedInsultsModel.swift; sourceTree = "<group>"; };
 		2D9450A22831428800BB5D48 /* SavedInsultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedInsultsVC.swift; sourceTree = "<group>"; };
 		2D9450A5283143AB00BB5D48 /* SavedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPresenter.swift; sourceTree = "<group>"; };
 		2DADFBDB280594700006CEE9 /* Evil Insult Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Evil Insult Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +85,7 @@
 			children = (
 				2D60ACD2282C3F32007A9AB4 /* InsultVC.swift */,
 				2D60ACD4282C3F49007A9AB4 /* InsultModel.swift */,
-				2D60ACD6282C3FBC007A9AB4 /* StartPresenter.swift */,
+				2D60ACD6282C3FBC007A9AB4 /* InsultPresenter.swift */,
 			);
 			path = StartModule;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9450A22831428800BB5D48 /* SavedInsultsVC.swift */,
-				2D9450A028313C0800BB5D48 /* InsultsModel.swift */,
+				2D9450A028313C0800BB5D48 /* SavedInsultsModel.swift */,
 				2D9450A5283143AB00BB5D48 /* SavedPresenter.swift */,
 			);
 			path = SavedModule;
@@ -350,10 +350,10 @@
 			files = (
 				2D60ACDB282C40A7007A9AB4 /* NetworkService.swift in Sources */,
 				2D60ACF0282EABE6007A9AB4 /* Colors.swift in Sources */,
-				2D60ACD7282C3FBC007A9AB4 /* StartPresenter.swift in Sources */,
+				2D60ACD7282C3FBC007A9AB4 /* InsultPresenter.swift in Sources */,
 				2DADFBDF280594700006CEE9 /* AppDelegate.swift in Sources */,
 				2DADFBE9280594700006CEE9 /* Evil_Insult_Generator.xcdatamodeld in Sources */,
-				2D9450A128313C0800BB5D48 /* InsultsModel.swift in Sources */,
+				2D9450A128313C0800BB5D48 /* SavedInsultsModel.swift in Sources */,
 				2DADFBE1280594700006CEE9 /* SceneDelegate.swift in Sources */,
 				2D60ACEE282EA2F8007A9AB4 /* AppFonts.swift in Sources */,
 				2D9450A6283143AB00BB5D48 /* SavedPresenter.swift in Sources */,

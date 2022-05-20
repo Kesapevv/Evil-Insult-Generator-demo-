@@ -13,8 +13,8 @@ protocol SavedViewProtocol: AnyObject {
 }
 
 protocol SavedViewPresenterProtocol: AnyObject {
-    init(view: SavedViewProtocol, router: RouterProtocol, insults: InsultsModel, coredata: CoreDataManagerProtocol)
-    var insults: InsultsModel { get set }
+    init(view: SavedViewProtocol, router: RouterProtocol, insults: SavedInsultsModel, coredata: CoreDataManagerProtocol)
+    var insults: SavedInsultsModel { get set }
     var index: Int { get set }
     func deleteInsult()
     func fetchInsults()
@@ -28,10 +28,10 @@ class SavedPresenter: SavedViewPresenterProtocol {
     weak var view: SavedViewProtocol?
     var coreData: CoreDataManagerProtocol
     var router: RouterProtocol?
-    var insults: InsultsModel
+    var insults: SavedInsultsModel
     var index = 0
     
-    required init(view: SavedViewProtocol, router: RouterProtocol, insults: InsultsModel, coredata: CoreDataManagerProtocol) {
+    required init(view: SavedViewProtocol, router: RouterProtocol, insults: SavedInsultsModel, coredata: CoreDataManagerProtocol) {
         self.view = view
         self.router = router
         self.insults = insults
@@ -46,14 +46,11 @@ class SavedPresenter: SavedViewPresenterProtocol {
     }
     
     func deleteInsult() {
-        if index >= 0 && index <= self.insults.savedInsultsData.count && self.coreData.insults.savedInsultsData.isEmpty == false {
+        if self.index >= 0 && self.index <= self.insults.savedInsultsData.count && self.coreData.insults.savedInsultsData.isEmpty == false {
             self.coreData.deleteInsult(savedData: self.insults.savedInsultsData[self.index])
-        } else {
-
+            self.fetchInsults()
             print("Сейчас в дате \(self.coreData.insults.savedInsultsData.count) ")
-            
         }
-        
     }
     
     func fetchInsults() {

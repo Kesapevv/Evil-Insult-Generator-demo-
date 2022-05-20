@@ -68,9 +68,6 @@ class SavedInsultsVC: UIViewController {
         self.setupImages()
         self.setupLayout()
         self.setupData()
-        
-      //  print("КОЛИЧЕСТВО СОХРАНЕННЫХ в аппеар \(self.presenter?.insults.savedInsults.count)")
-        print("КОЛИЧЕСТВО В ДАТЕ в аппеар \(self.presenter?.insults.savedInsultsData.count)")
     }
     
     //MARK: - Methods
@@ -146,7 +143,7 @@ class SavedInsultsVC: UIViewController {
         if self.presenter?.insults.savedInsultsData.isEmpty == true {
             self.insultLabel.text = "no insults"
         } else {
-            self.insultLabel.attributedText = String.stringConfig(self.presenter?.insults.savedInsultsData.last?.insult ?? "no insults")
+            self.insultLabel.text = self.presenter?.insults.savedInsultsData[0].insult
         }
         
         self.backLabel.text = "Back"
@@ -227,11 +224,12 @@ class SavedInsultsVC: UIViewController {
     
     @objc func deleteButtonAction() {
         self.presenter?.deleteInsult()
-        
-        if self.presenter?.previousInsult() != nil {
-        self.insultLabel.text = self.presenter?.previousInsult()
-        } else {
+        if self.presenter?.index == 0 && self.presenter?.insults.savedInsultsData.isEmpty == false {
+            self.insultLabel.text = self.presenter?.nextInsult()
+        } else if self.presenter?.index == 0 && self.presenter?.insults.savedInsultsData.isEmpty == true {
             self.insultLabel.text = "no insults"
+        } else if self.presenter!.index > 0 {
+            self.insultLabel.text = self.presenter?.previousInsult()
         }
     }
     
@@ -241,7 +239,7 @@ class SavedInsultsVC: UIViewController {
     
     @objc func previousInsultAction() {
         if self.presenter?.insults.savedInsultsData.isEmpty == false {
-        self.insultLabel.text = self.presenter?.previousInsult()
+            self.insultLabel.text = self.presenter?.previousInsult()
         } else {
             self.insultLabel.text = "no insults"
         }
@@ -249,7 +247,7 @@ class SavedInsultsVC: UIViewController {
     
     @objc func nextInsultAction() {
         if self.presenter?.insults.savedInsultsData.isEmpty == false {
-        self.insultLabel.text = self.presenter?.nextInsult()
+            self.insultLabel.text = self.presenter?.nextInsult()
         } else {
             self.insultLabel.text = "no insults"
         }

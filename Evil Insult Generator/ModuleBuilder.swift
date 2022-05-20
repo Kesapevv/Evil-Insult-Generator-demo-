@@ -19,10 +19,10 @@ class AssemblyModelBuilder: AssemblyBuilderProtocol {
     func createStartModule(router: RouterProtocol) -> UIViewController {
         let view = InsultVC()
         let insult = InsultModel()
-        let insults = InsultsModel()
+        let insults = SavedInsultsModel()
         let networkService = Network()
         let coreData = CoreDataManager(insults: insults)
-        let presenter = StartPresenter(view: view, networkService: networkService, router: router, insult: insult, insults: insults, coredata: coreData)
+        let presenter = InsultPresenter(view: view, networkService: networkService, router: router, insult: insult, insults: insults, coredata: coreData)
         view.presenter = presenter
         return view
     }
@@ -36,7 +36,7 @@ class AssemblyModelBuilder: AssemblyBuilderProtocol {
     
     func createSavedModule(router: RouterProtocol) -> UIViewController {
         let view = SavedInsultsVC()
-        let insults = InsultsModel()
+        let insults = SavedInsultsModel()
         let coreData = CoreDataManager(insults: insults)
         let presenter = SavedPresenter(view: view, router: router, insults: insults, coredata: coreData)
         view.presenter = presenter

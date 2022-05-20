@@ -15,26 +15,26 @@ protocol StartViewProtocol: AnyObject {
 }
 
 protocol StartViewPresenterProtocol: AnyObject {
-    init(view: StartViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, insult: InsultModel, insults: InsultsModel, coredata: CoreDataManagerProtocol)
+    init(view: StartViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, insult: InsultModel, insults: SavedInsultsModel, coredata: CoreDataManagerProtocol)
     var insult: InsultModel { get }
-    var insults: InsultsModel { get }
+    var insults: SavedInsultsModel { get }
     func getInsult()
     func tapOnSettings()
     func shareInsult(vc: UIViewController)
     func saveInsult()
 }
 
-class StartPresenter: StartViewPresenterProtocol {
+class InsultPresenter: StartViewPresenterProtocol {
     
     weak var view: StartViewProtocol?
     
     let networkService: NetworkServiceProtocol
     var coreData: CoreDataManagerProtocol
     var insult: InsultModel
-    var insults: InsultsModel
+    var insults: SavedInsultsModel
     var router: RouterProtocol?
     
-    required init(view: StartViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, insult: InsultModel, insults: InsultsModel, coredata: CoreDataManagerProtocol) {
+    required init(view: StartViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, insult: InsultModel, insults: SavedInsultsModel, coredata: CoreDataManagerProtocol) {
         self.view = view
         self.networkService = networkService
         self.router = router
@@ -45,7 +45,7 @@ class StartPresenter: StartViewPresenterProtocol {
     }
     
     func getInsult() {
-        networkService.FetchData { [weak self] insultResult, isSuccess in
+        self.networkService.FetchData { [weak self] insultResult, isSuccess in
             switch isSuccess {
             case true:
                 self?.insult.currentInsult = insultResult
@@ -55,15 +55,15 @@ class StartPresenter: StartViewPresenterProtocol {
             }
         }
     }
-
+    
     func tapOnSettings() {
         self.router?.showSettingsVC()
     }
     
     func shareInsult(vc: UIViewController) {
         let activityVC = UIActivityViewController(activityItems: ["\(self.insult.currentInsult)"], applicationActivities: nil)
-               activityVC.popoverPresentationController?.sourceView = vc.view
-                vc.present(activityVC, animated: true, completion: nil)
+        activityVC.popoverPresentationController?.sourceView = vc.view
+        vc.present(activityVC, animated: true, completion: nil)
     }
     
     func saveInsult() {

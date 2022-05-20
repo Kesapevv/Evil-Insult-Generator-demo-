@@ -14,7 +14,7 @@ protocol NetworkServiceProtocol {
 
 class Network: NetworkServiceProtocol {
     
-   func FetchData(completionHandler: @escaping (String, Bool) -> ()) {
+    func FetchData(completionHandler: @escaping (String, Bool) -> ()) {
         AF.request("https://evilinsult.com/generate_insult.php?lang=en&type=json", method: .get).validate().responseDecodable(of: InsultModel.self) { response in
             
             switch response.result {
@@ -27,7 +27,7 @@ class Network: NetworkServiceProtocol {
                 completionHandler("Error", false)
                 print(error)
             }
+            
         }
-        
     }
 }

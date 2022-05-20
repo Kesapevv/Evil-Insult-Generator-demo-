@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 public enum Images {
-   
-   static let day = "day"
-   static let night = "library"
+    
+    static let day = "day"
+    static let night = "library"
     
 }
 
@@ -23,5 +23,5 @@ extension UIImageView {
         imageView.contentMode = .scaleToFill
         return imageView
     }
-        
+    
 }

@@ -186,7 +186,7 @@ class InsultVC: UIViewController {
     }
     
     private func setupLabelsData() {
-        self.insultLabel.attributedText = String.stringConfig(self.presenter?.insult.currentInsult ?? "No insults")
+        self.insultLabel.text = self.presenter?.insult.currentInsult
         
         self.saveLabel.text = "Save"
         self.saveLabel.font = AppFonts.regular15.font
@@ -262,13 +262,6 @@ class InsultVC: UIViewController {
         
         self.saveButton.tintColor = .black
         self.saveButton.setImage(UIImage(named: "star"), for: .normal)
-        
-//        let textString = self.insultLabel.text
-//        if self.presenter?.insults.savedInsults.contains(text) {
-//            self.saveButton.setImage(UIImage(named: "star.fill"), for: .normal)
-//        } else {
-//            self.saveButton.setImage(UIImage(named: "star"), for: .normal)
-//        }
         
         self.shareButton.tintColor = .black
         self.shareButton.setImage(UIImage(named: "location.fill"), for: .normal)

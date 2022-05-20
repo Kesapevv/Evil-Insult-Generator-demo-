@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InsultsModel {
+class SavedInsultsModel {
     
     var savedInsultsData: [Insults] = []
     

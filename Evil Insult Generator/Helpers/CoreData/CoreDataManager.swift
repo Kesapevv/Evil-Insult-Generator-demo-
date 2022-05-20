@@ -10,8 +10,8 @@ import UIKit
 import CoreData
 
 protocol CoreDataManagerProtocol {
-    init(insults: InsultsModel)
-    var insults: InsultsModel { get set }
+    init(insults: SavedInsultsModel)
+    var insults: SavedInsultsModel { get set }
     func saveInsult(insult: String)
     func fetchInsult()
     func deleteInsult(savedData: NSManagedObject)
@@ -19,9 +19,9 @@ protocol CoreDataManagerProtocol {
 
 class CoreDataManager: CoreDataManagerProtocol {
     
-    var insults: InsultsModel
+    var insults: SavedInsultsModel
     
-    required init(insults: InsultsModel) {
+    required init(insults: SavedInsultsModel) {
         self.insults = insults
     }
     
@@ -67,28 +67,5 @@ class CoreDataManager: CoreDataManagerProtocol {
             print(error.localizedDescription)
         }
     }
+    
 }
-
-
-////    func deleteInsult() {
-//func deleteInsult() {
-//    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-//
-//    let context = appDelegate.persistentContainer.viewContext
-//    let fetchRequest: NSFetchRequest<Insults> = Insults.fetchRequest()
-//
-//    if case self.insults.savedInsultsData = try? context.fetch(fetchRequest) {
-////            for insult in self.insults.savedInsults {
-////                context.delete(insult)
-////            }
-//        context.delete(self.insults.savedInsultsData.last!)
-//
-//        do {
-//            try context.save()
-//            print(self.insults.savedInsultsData.count)
-//            print("\(String(describing: self.insults.savedInsultsData.first))")
-//        } catch let error as NSError {
-//            print(error.localizedDescription)
-//        }
-//    }
-//}

@@ -11,7 +11,7 @@ import UIKit
 enum AppFonts {
     case regular17
     case regular15
-
+    
     var font: UIFont? {
         switch self {
         case .regular17:

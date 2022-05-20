@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UILabel {
-
+    
     static func insultString() -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0
@@ -20,6 +20,6 @@ extension UILabel {
         label.lineBreakMode = .byClipping
         label.sizeToFit()
         return label
-
+        
     }
 }
