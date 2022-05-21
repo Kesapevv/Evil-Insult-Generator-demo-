@@ -12,7 +12,7 @@ protocol CountdownTimerProtocol {
     func startCountdown(totalTime: Int, timerEnded: @escaping () -> Void, timerInProgress: @escaping (Int) -> Void)
 }
 
-class CountdownTimer: NSObject, CountdownTimerProtocol {
+final class CountdownTimer: NSObject, CountdownTimerProtocol {
     private var timeRemaining = 0
     static var timer = Timer()
     var timerEndedCallback: (() -> Void)?

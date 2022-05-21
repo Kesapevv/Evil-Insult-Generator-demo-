@@ -20,7 +20,7 @@ protocol SettingsViewPresenterProtocol: AnyObject {
     func rateUsAction(vc: UIViewController)
 }
 
-class SettingsPresenter: SettingsViewPresenterProtocol {
+final class SettingsPresenter: SettingsViewPresenterProtocol {
     
     weak var view: SettingsViewProtocol?
     var router: RouterProtocol?

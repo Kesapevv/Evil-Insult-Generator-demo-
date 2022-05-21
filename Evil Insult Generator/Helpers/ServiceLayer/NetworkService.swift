@@ -12,7 +12,7 @@ protocol NetworkServiceProtocol {
     func FetchData(completionHandler: @escaping (String, Bool) -> ())
 }
 
-class Network: NetworkServiceProtocol {
+final class Network: NetworkServiceProtocol {
     
     func FetchData(completionHandler: @escaping (String, Bool) -> ()) {
         AF.request("https://evilinsult.com/generate_insult.php?lang=en&type=json", method: .get).validate().responseDecodable(of: InsultModel.self) { response in

@@ -14,7 +14,7 @@ protocol AssemblyBuilderProtocol {
     func createSavedModule(router: RouterProtocol) -> UIViewController
 }
 
-class AssemblyModelBuilder: AssemblyBuilderProtocol {
+final class AssemblyModelBuilder: AssemblyBuilderProtocol {
     
     func createStartModule(router: RouterProtocol) -> UIViewController {
         let view = InsultVC()

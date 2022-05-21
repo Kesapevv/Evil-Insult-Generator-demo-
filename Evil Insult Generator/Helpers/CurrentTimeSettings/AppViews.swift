@@ -15,7 +15,7 @@ enum ViewsColors {
     
 }
 
-class AppViews {
+final class AppViews {
     
     static let hour = Calendar.current.component(.hour, from: Date())
     

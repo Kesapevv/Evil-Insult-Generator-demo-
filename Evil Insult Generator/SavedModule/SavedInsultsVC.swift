@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SavedInsultsVC: UIViewController {
+final class SavedInsultsVC: UIViewController {
     
     //MARK: - Properties
     

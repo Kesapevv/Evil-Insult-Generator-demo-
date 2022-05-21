@@ -23,7 +23,7 @@ protocol SavedViewPresenterProtocol: AnyObject {
     func previousInsult() -> String?
 }
 
-class SavedPresenter: SavedViewPresenterProtocol {
+final class SavedPresenter: SavedViewPresenterProtocol {
     
     weak var view: SavedViewProtocol?
     var coreData: CoreDataManagerProtocol

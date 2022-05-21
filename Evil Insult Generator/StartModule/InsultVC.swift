@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class InsultVC: UIViewController {
+final class InsultVC: UIViewController {
     
     //MARK: - Properties
     

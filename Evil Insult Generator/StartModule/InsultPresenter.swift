@@ -24,7 +24,7 @@ protocol StartViewPresenterProtocol: AnyObject {
     func saveInsult()
 }
 
-class InsultPresenter: StartViewPresenterProtocol {
+final class InsultPresenter: StartViewPresenterProtocol {
     
     weak var view: StartViewProtocol?
     

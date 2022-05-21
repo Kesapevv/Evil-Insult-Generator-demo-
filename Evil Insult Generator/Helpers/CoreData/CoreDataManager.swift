@@ -17,7 +17,7 @@ protocol CoreDataManagerProtocol {
     func deleteInsult(savedData: NSManagedObject)
 }
 
-class CoreDataManager: CoreDataManagerProtocol {
+final class CoreDataManager: CoreDataManagerProtocol {
     
     var insults: SavedInsultsModel
     

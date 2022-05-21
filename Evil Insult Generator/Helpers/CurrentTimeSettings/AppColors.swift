@@ -15,7 +15,7 @@ enum DayNightColors {
     
 }
 
-class AppColors {
+final class AppColors {
     
     static let hour = Calendar.current.component(.hour, from: Date())
     

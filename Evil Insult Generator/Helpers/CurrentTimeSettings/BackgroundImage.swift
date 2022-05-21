@@ -17,7 +17,7 @@ enum ImagesNames {
     
 }
 
-class BackgroundImage {
+final class BackgroundImage {
     
     static let hour = Calendar.current.component(.hour, from: Date())
     
