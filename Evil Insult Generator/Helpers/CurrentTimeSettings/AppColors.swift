@@ -22,10 +22,10 @@ class AppColors {
     static func chooseStringColor() -> UIColor {
         
         switch self.hour {
-        case 1...8: return DayNightColors.night
-        case 8...18: return DayNightColors.day
-        case 18...24: return DayNightColors.night
-        default: return DayNightColors.night
+        case 1...8: return DayNightColors.day
+        case 8...18: return DayNightColors.night
+        case 18...24: return DayNightColors.day
+        default: return .red
         }
         
     }

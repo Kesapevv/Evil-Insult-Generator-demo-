@@ -10,7 +10,7 @@ import UIKit
 
 enum ViewsColors {
     
-    static let day = Colors.semiblack.value
+    static let day = Colors.semiwhite.value
     static let night = Colors.semiblack.value
     
 }

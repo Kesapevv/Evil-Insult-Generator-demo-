@@ -19,7 +19,7 @@ enum Colors {
         case .semiwhite:
             return UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         case .black:
-            return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            return UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         case .semiblack:
             return UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         case .white:
