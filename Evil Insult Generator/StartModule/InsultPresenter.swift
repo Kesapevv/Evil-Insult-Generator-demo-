@@ -46,12 +46,13 @@ final class InsultPresenter: StartViewPresenterProtocol {
     
     func getInsult() {
         self.networkService.FetchData { [weak self] insultResult, isSuccess in
+            guard let self = self else { return }
             switch isSuccess {
             case true:
-                self?.insult.currentInsult = insultResult
-                self?.view?.success()
+                self.insult.currentInsult = insultResult
+                self.view?.success()
             case false:
-                self?.view?.failure()
+                self.view?.failure()
             }
         }
     }

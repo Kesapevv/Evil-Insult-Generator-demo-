@@ -345,7 +345,8 @@ extension InsultVC: StartViewProtocol {
     func failure() {
         let alert = UIAlertController(title: "WTF", message: "No internet connection", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: { [weak self] alert in
-            self?.presenter?.getInsult()
+            guard let self = self else { return }
+            self.presenter?.getInsult()
         }))
         self.present(alert, animated: true)
     }
