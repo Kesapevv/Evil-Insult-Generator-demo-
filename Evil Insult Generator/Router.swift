@@ -56,5 +56,5 @@ final class Router: RouterProtocol {
             navigationContoller.popToRootViewController(animated: true)
         }
     }
-    
+
 }
